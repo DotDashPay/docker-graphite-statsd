@@ -9,6 +9,8 @@ docker run -d\
        --restart=always\
        -p 80:80\
        -p 8080:81\
+       -p 443:443\
+       -p 2053:2053\
        -p 2003-2004:2003-2004\
        -p 2023-2024:2023-2024\
        -p 8125:8125/udp\
@@ -16,5 +18,7 @@ docker run -d\
        -v graphite-storage:/opt/graphite/storage\
        -v statsd-storage:/opt/statsd\
        -v grafana-storage:/var/lib/grafana\
+       -v .ssl/fractiondeals.crt:/etc/nginx/fractiondeals.crt\
+       -v .ssl/fractiondeals.key:/etc/nginx/fractiondeals.key\
        stats
 
