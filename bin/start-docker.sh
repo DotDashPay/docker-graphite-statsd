@@ -18,7 +18,7 @@ docker run -d\
        -v graphite-storage:/opt/graphite/storage\
        -v statsd-storage:/opt/statsd\
        -v grafana-storage:/var/lib/grafana\
-       -v .ssl/fractiondeals.crt:/etc/nginx/fractiondeals.crt\
-       -v .ssl/fractiondeals.key:/etc/nginx/fractiondeals.key\
+       -v ~/.ssl/fractiondeals.crt:/etc/nginx/fractiondeals.crt\
+       -v ~/.ssl/fractiondeals.key:/etc/nginx/fractiondeals.key\
        stats
 
